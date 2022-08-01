@@ -1,15 +1,18 @@
 import random
 
+# This advanced solution is the same as the original but we have added a round counter.
+# Each round begins by showing the round number
+# This is quite simple, so I've put a comment on each line that has changed :)
 balance = 100
 symbols = ["{cherries}", "{bell}", "{lemon}", "{tangerine}", "{glowing star}", "{skull}"]
-round_count = 1
+round_count = 1  # stores the current round number (starts at 1)
 
 while balance > 0:
     is_quitting = input("Press enter to continue or type 'q' to quit!")
     if is_quitting == 'q':
         break
 
-    print(f"\n============================[ Round {round_count} ]============================")
+    print(f"\n============================[ Round {round_count} ]============================")  # Showing round count
     balance = balance - 20
     print("20 has been subtracted from your balance as payment for this round.")
 
@@ -37,7 +40,7 @@ while balance > 0:
             balance = balance + 100
 
     print(f"You finished the round with a balance of {balance}!")
-    print("===================================================================\n")
-    round_count += 1
+    print("===================================================================\n")  # End of round
+    round_count += 1  # Add to round
 
 print(f"You finished the game with a balance of {balance}!")
